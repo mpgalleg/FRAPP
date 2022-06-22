@@ -3,10 +3,11 @@
 # from os import path
 # cd = os.chdir
 #cd("/drive/Shared with me/")
+from pdflatex import PDFLaTeX
 import numpy as np
 
 # open .tex file you want to FRAPP
-with open("main.tex") as text: 
+with open("./Examples/example1/main.tex") as text: 
   fulltext = text.readlines()
 
 # Saving the document intializing code (before \begin{abstract})
@@ -69,3 +70,8 @@ with open("testing.tex", "w") as f:
     f.write(i)
 
 f.close()
+
+# testing
+
+pdfl = PDFLaTeX.from_texfile('testing.tex')
+pdf, log, completed_process = pdfl.create_pdf(keep_pdf_file=True, keep_log_file=True)
