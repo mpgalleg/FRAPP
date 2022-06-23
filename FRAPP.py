@@ -6,25 +6,39 @@
 import numpy as np
 
 # open .tex file you want to FRAPP
-with open("main.tex") as text: 
-  fulltext = text.readlines()
+def open_file(a):
+  with open("main.tex") as text: 
+    fulltext = text.readlines()
 
-# Saving the document intializing code (before \begin{abstract})
-for i in range(len(fulltext)): 
-  if "\\begin{abstract}" in fulltext[i]: 
-    start_ind = i
-    break;
+  # Saving the document intializing code (before \begin{abstract})
+  for i in range(len(fulltext)): 
+    if "\\begin{abstract}" in fulltext[i]: 
+      start_ind = i
+      break;
 
-# start_ind = fulltext.index("\\begin{abstract}\n")
-# print(start_ind)
-docinit = fulltext[0:start_ind+1]
-abstract = fulltext[start_ind+1]
+  # start_ind = fulltext.index("\\begin{abstract}\n")
+  # print(start_ind)
+  docinit = fulltext[0:start_ind+1]
+  abstract = fulltext[start_ind+1]
 
 def bold_letter(word, split_index):
   return '\\textbf{'+ word[0:split_index] + '}' + word[split_index:]
 
 
-def check_word(word):
+def modify_word_font(word):
+  """ Modify word font 
+
+  This takes in one word from latex file, checks word length, and bolds appropriate letters. 
+  
+  Args:
+    word (str): Word to be modified
+
+  Returns:
+    str: latex compatible modified word 
+
+  Example:
+    'espresso' -> '\\textbf{espr}esso' 
+  """
 
   length = len(word) 
   if '$' in word or  '\\' in word or '{' in word or '}' in word:
@@ -52,20 +66,21 @@ def check_word(word):
 
   return new_word 
 
-abstract_word_list = abstract.split()
-for i, word in enumerate(abstract_word_list):
-  abstract_word_list[i] = check_word(word)
+def test(a):
+  abstract_word_list = abstract.split()
+  for i, word in enumerate(abstract_word_list):
+    abstract_word_list[i] = check_word(word)
 
-new_abstract = ' '.join(abstract_word_list)
+  new_abstract = ' '.join(abstract_word_list)
 
-newtext = "".join(docinit) + new_abstract + "".join(fulltext[start_ind+2:])
+  newtext = "".join(docinit) + new_abstract + "".join(fulltext[start_ind+2:])
 
-with open("testing.tex", "w") as f: 
-  for i in docinit: 
-    print(i)
-    f.write(i)
-  f.write(new_abstract)
-  for i in fulltext[start_ind+2:]: 
-    f.write(i)
+  with open("testing.tex", "w") as f: 
+    for i in docinit: 
+      print(i)
+      f.write(i)
+    f.write(new_abstract)
+    for i in fulltext[start_ind+2:]: 
+      f.write(i)
 
-f.close()
+  f.close()
