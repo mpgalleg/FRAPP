@@ -50,7 +50,8 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
       ## After line is reformatted into newline, write in text
       newtext.write(newline)
     ## Repeat for the rest of the paper
-
+  newtext.close()
+  return None
 ### END of FRAPPify ###
 
 def setup_file(filename, savefile=None): 
