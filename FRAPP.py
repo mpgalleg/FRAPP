@@ -25,7 +25,7 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
 
   ### From here on, check if line is text. If it is, start FRAPP procedure
   for line in fulltext[abs_ind+1:]: 
-    if line[0] == "\\" and line[-1] == "}": # Assume formatting code follows known pattern
+    if line[0] == "\\": # Assume formatting code begins with \. Will need to refine this part
       newtext.write(line)
       pass;
     else: # else, this is text!
@@ -40,7 +40,8 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
         ## word_split is a list of these words split by the hyphen/slash
 
         for j, w in enumerate(word_split): # word split by characters like - or /
-          try: if w[0].isalpha(): word_split[j] = modify_word_font(w) # FRAPPifying the word! 
+          try: 
+            if w[0].isalpha(): word_split[j] = modify_word_font(w) # FRAPPifying the word! 
           except: pass;
           ## if word_split is a single word, modify_word_font still works
 
@@ -97,14 +98,14 @@ def setup_file(filename, savefile=None):
   # Adding code before abstract + \usepackage{setspace} to the new paper
   for i in fulltext[0:docclass_ind+1]:
     newtext.write(i)
-  newtext.write(r"\\usepackage{setspace}")
+  newtext.write(r"\\usepackage{setspace}\n")
   for i in fulltext[docclass_ind+1:abs_ind]: 
     newtext.write(i)
-  newtext.write(r"\\sffamily")
-  newtext.write(r"\\setstretch{1.6}")
+  newtext.write(r"\\sffamily\n")
+  newtext.write(r"\\setstretch{1.6}\n")
   # Adding the abstract setup code (e.g. \begin{abstract} or \abstract)
   newtext.write(fulltext[abs_ind+1])
-  newtext.write(r"\\sffamily")
+  newtext.write(r"\\sffamily\n")
 
   # From here, each line can be read in an FRAPPified accordingly. 
   return fulltext,newtext,abs_ind
