@@ -1,0 +1,587 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{41}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Riess}\ \emph {et~al.}(2016)\citenamefont {Riess}
+  \emph {et~al.}}]{Riess:2016jrr}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~G.}\ \bibnamefont
+  {Riess}} \emph {et~al.},\ }\bibfield  {title} {\bibinfo {title} {{A 2.4\%
+  Determination of the Local Value of the Hubble Constant}},\ }\href
+  {https://doi.org/10.3847/0004-637X/826/1/56} {\bibfield  {journal} {\bibinfo
+  {journal} {Astrophys. J.}\ }\textbf {\bibinfo {volume} {826}},\ \bibinfo
+  {pages} {56} (\bibinfo {year} {2016})},\ \Eprint
+  {https://arxiv.org/abs/1604.01424} {arXiv:1604.01424 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1604.01424;%%
+\bibitem [{\citenamefont {Riess}\ \emph {et~al.}(2019)\citenamefont {Riess},
+  \citenamefont {Casertano}, \citenamefont {Yuan}, \citenamefont {Macri},\ and\
+  \citenamefont {Scolnic}}]{Riess:2019cxk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~G.}\ \bibnamefont
+  {Riess}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Casertano}},
+  \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Yuan}}, \bibinfo {author}
+  {\bibfnamefont {L.~M.}\ \bibnamefont {Macri}},\ and\ \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Scolnic}},\ }\bibfield  {title} {\bibinfo
+  {title} {{Large Magellanic Cloud Cepheid Standards Provide a 1\% Foundation
+  for the Determination of the Hubble Constant and Stronger Evidence for
+  Physics beyond $\Lambda$CDM}},\ }\href
+  {https://doi.org/10.3847/1538-4357/ab1422} {\bibfield  {journal} {\bibinfo
+  {journal} {Astrophys. J.}\ }\textbf {\bibinfo {volume} {876}},\ \bibinfo
+  {pages} {85} (\bibinfo {year} {2019})},\ \Eprint
+  {https://arxiv.org/abs/1903.07603} {arXiv:1903.07603 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+%%CITATION = ARXIV:1903.07603;%%
+\bibitem [{\citenamefont {Riess}\ \emph
+  {et~al.}(2021{\natexlab{a}})\citenamefont {Riess}, \citenamefont {Casertano},
+  \citenamefont {Yuan}, \citenamefont {Bowers}, \citenamefont {Macri},
+  \citenamefont {Zinn},\ and\ \citenamefont {Scolnic}}]{Riess:2020fzl}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~G.}\ \bibnamefont
+  {Riess}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Casertano}},
+  \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Yuan}}, \bibinfo {author}
+  {\bibfnamefont {J.~B.}\ \bibnamefont {Bowers}}, \bibinfo {author}
+  {\bibfnamefont {L.}~\bibnamefont {Macri}}, \bibinfo {author} {\bibfnamefont
+  {J.~C.}\ \bibnamefont {Zinn}},\ and\ \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Scolnic}},\ }\bibfield  {title} {\bibinfo {title} {{Cosmic
+  Distances Calibrated to 1\% Precision with Gaia EDR3 Parallaxes and Hubble
+  Space Telescope Photometry of 75 Milky Way Cepheids Confirm Tension with
+  $\Lambda$CDM}},\ }\href {https://doi.org/10.3847/2041-8213/abdbaf} {\bibfield
+   {journal} {\bibinfo  {journal} {Astrophys. J. Lett.}\ }\textbf {\bibinfo
+  {volume} {908}},\ \bibinfo {pages} {L6} (\bibinfo {year}
+  {2021}{\natexlab{a}})},\ \Eprint {https://arxiv.org/abs/2012.08534}
+  {arXiv:2012.08534 [astro-ph.CO]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Aghanim}\ \emph {et~al.}(2020)\citenamefont {Aghanim}
+  \emph {et~al.}}]{Planck:2018vyg}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Aghanim}} \emph {et~al.} (\bibinfo {collaboration} {Planck}),\ }\bibfield
+  {title} {\bibinfo {title} {{Planck 2018 results. VI. Cosmological
+  parameters}},\ }\href {https://doi.org/10.1051/0004-6361/201833910}
+  {\bibfield  {journal} {\bibinfo  {journal} {Astron. Astrophys.}\ }\textbf
+  {\bibinfo {volume} {641}},\ \bibinfo {pages} {A6} (\bibinfo {year} {2020})},\
+  \bibinfo {note} {[Erratum: Astron.Astrophys. 652, C4 (2021)]},\ \Eprint
+  {https://arxiv.org/abs/1807.06209} {arXiv:1807.06209 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Riess}\ \emph
+  {et~al.}(2021{\natexlab{b}})\citenamefont {Riess} \emph
+  {et~al.}}]{Riess:2021jrx}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~G.}\ \bibnamefont
+  {Riess}} \emph {et~al.},\ }\bibfield  {title} {\bibinfo {title} {{A
+  Comprehensive Measurement of the Local Value of the Hubble Constant with 1
+  km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {arXiv e-prints}\ }
+  (\bibinfo {year} {2021}{\natexlab{b}})},\ \Eprint
+  {https://arxiv.org/abs/2112.04510} {arXiv:2112.04510 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Freedman}\ \emph {et~al.}(2019)\citenamefont
+  {Freedman} \emph {et~al.}}]{Freedman:2019jwv}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~L.}\ \bibnamefont
+  {Freedman}} \emph {et~al.},\ }\bibfield  {title} {\bibinfo {title} {{The
+  Carnegie-Chicago Hubble Program. VIII. An Independent Determination of the
+  Hubble Constant Based on the Tip of the Red Giant Branch}},\ }\bibfield
+  {journal} {\bibinfo  {journal} {arXiv e-prints}\ }\href
+  {https://doi.org/10.3847/1538-4357/ab2f73} {10.3847/1538-4357/ab2f73}
+  (\bibinfo {year} {2019}),\ \Eprint {https://arxiv.org/abs/1907.05922}
+  {arXiv:1907.05922 [astro-ph.CO]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Birrer}\ \emph {et~al.}(2020)\citenamefont {Birrer}
+  \emph {et~al.}}]{Birrer:2020tax}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Birrer}} \emph {et~al.},\ }\bibfield  {title} {\bibinfo {title} {{TDCOSMO -
+  IV. Hierarchical time-delay cosmography \textendash{} joint inference of the
+  Hubble constant and galaxy density profiles}},\ }\href
+  {https://doi.org/10.1051/0004-6361/202038861} {\bibfield  {journal} {\bibinfo
+   {journal} {Astron. Astrophys.}\ }\textbf {\bibinfo {volume} {643}},\
+  \bibinfo {pages} {A165} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/2007.02941} {arXiv:2007.02941 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Abbott}\ \emph {et~al.}(2017)\citenamefont {Abbott}
+  \emph {et~al.}}]{LIGOScientific:2017adf}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~P.}\ \bibnamefont
+  {Abbott}} \emph {et~al.} (\bibinfo {collaboration} {LIGO Scientific, Virgo,
+  1M2H, Dark Energy Camera GW-E, DES, DLT40, Las Cumbres Observatory, VINROUGE,
+  MASTER}),\ }\bibfield  {title} {\bibinfo {title} {{A gravitational-wave
+  standard siren measurement of the Hubble constant}},\ }\href
+  {https://doi.org/10.1038/nature24471} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature}\ }\textbf {\bibinfo {volume} {551}},\ \bibinfo {pages}
+  {85} (\bibinfo {year} {2017})},\ \Eprint {https://arxiv.org/abs/1710.05835}
+  {arXiv:1710.05835 [astro-ph.CO]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Abbott}\ \emph {et~al.}(2021)\citenamefont {Abbott}
+  \emph {et~al.}}]{LIGOScientific:2019zcs}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~P.}\ \bibnamefont
+  {Abbott}} \emph {et~al.} (\bibinfo {collaboration} {LIGO Scientific, Virgo,
+  VIRGO}),\ }\bibfield  {title} {\bibinfo {title} {{A Gravitational-wave
+  Measurement of the Hubble Constant Following the Second Observing Run of
+  Advanced LIGO and Virgo}},\ }\href {https://doi.org/10.3847/1538-4357/abdcb7}
+  {\bibfield  {journal} {\bibinfo  {journal} {Astrophys. J.}\ }\textbf
+  {\bibinfo {volume} {909}},\ \bibinfo {pages} {218} (\bibinfo {year}
+  {2021})},\ \bibinfo {note} {[Erratum: Astrophys.J. 923, 279 (2021)]},\
+  \Eprint {https://arxiv.org/abs/1908.06060} {arXiv:1908.06060 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Linder}(2021)}]{Linder:2021ujs}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~V.}\ \bibnamefont
+  {Linder}},\ }\bibfield  {title} {\bibinfo {title} {{What is the Standard
+  Cosmological Model?}}\ }(\bibinfo {year} {2021})\ \Eprint
+  {https://arxiv.org/abs/2105.02903} {arXiv:2105.02903 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Abdalla}\ \emph {et~al.}(2022)\citenamefont {Abdalla}
+  \emph {et~al.}}]{Abdalla:2022yfr}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Abdalla}} \emph {et~al.},\ }\bibfield  {title} {\bibinfo {title} {{Cosmology
+  intertwined: A review of the particle physics, astrophysics, and cosmology
+  associated with the cosmological tensions and anomalies}},\ }\href
+  {https://doi.org/10.1016/j.jheap.2022.04.002} {\bibfield  {journal} {\bibinfo
+   {journal} {JHEAp}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo {pages} {49}
+  (\bibinfo {year} {2022})},\ \Eprint {https://arxiv.org/abs/2203.06142}
+  {arXiv:2203.06142 [astro-ph.CO]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ryan}\ \emph {et~al.}(2019)\citenamefont {Ryan},
+  \citenamefont {Chen},\ and\ \citenamefont {Ratra}}]{Ryan:2019uor}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Ryan}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Chen}},\ and\
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Ratra}},\ }\bibfield
+  {title} {\bibinfo {title} {{Baryon acoustic oscillation, Hubble parameter,
+  and angular size measurement constraints on the Hubble constant, dark energy
+  dynamics, and spatial curvature}},\ }\href
+  {https://doi.org/10.1093/mnras/stz1966} {\bibfield  {journal} {\bibinfo
+  {journal} {Mon. Not. Roy. Astron. Soc.}\ }\textbf {\bibinfo {volume} {488}},\
+  \bibinfo {pages} {3844} (\bibinfo {year} {2019})},\ \Eprint
+  {https://arxiv.org/abs/1902.03196} {arXiv:1902.03196 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Di~Valentino}\ \emph {et~al.}(2019)\citenamefont
+  {Di~Valentino}, \citenamefont {Melchiorri},\ and\ \citenamefont
+  {Silk}}]{DiValentino:2019qzk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Di~Valentino}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Melchiorri}},\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Silk}},\ }\bibfield  {title} {\bibinfo {title} {{Planck evidence for a
+  closed Universe and a possible crisis for cosmology}},\ }\href
+  {https://doi.org/10.1038/s41550-019-0906-9} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature Astron.}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo
+  {pages} {196} (\bibinfo {year} {2019})},\ \Eprint
+  {https://arxiv.org/abs/1911.02087} {arXiv:1911.02087 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Joudaki}}\ \emph {et~al.}(2018)\citenamefont
+  {{Joudaki}}, \citenamefont {{Kaplinghat}}, \citenamefont {{Keeley}},\ and\
+  \citenamefont {{Kirkby}}}]{2018PhRvD..97l3501J}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {{Joudaki}}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {{Kaplinghat}}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {{Keeley}}},\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {{Kirkby}}},\ }\bibfield  {title} {\bibinfo {title} {{Model independent
+  inference of the expansion history and implications for the growth of
+  structure}},\ }\href {https://doi.org/10.1103/PhysRevD.97.123501} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume}
+  {97}},\ \bibinfo {eid} {123501} (\bibinfo {year} {2018})},\ \Eprint
+  {https://arxiv.org/abs/1710.04236} {arXiv:1710.04236 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Keeley}}\ \emph {et~al.}(2019)\citenamefont
+  {{Keeley}}, \citenamefont {{Joudaki}}, \citenamefont {{Kaplinghat}},\ and\
+  \citenamefont {{Kirkby}}}]{2019JCAP...12..035K}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~E.}\ \bibnamefont
+  {{Keeley}}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {{Joudaki}}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {{Kaplinghat}}},\ and\
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {{Kirkby}}},\ }\bibfield
+  {title} {\bibinfo {title} {{Implications of a transition in the dark energy
+  equation of state for the H$_{0}$ and {\ensuremath{\sigma}}$_{8}$
+  tensions}},\ }\href {https://doi.org/10.1088/1475-7516/2019/12/035}
+  {\bibfield  {journal} {\bibinfo  {journal} {JCAP}\ }\textbf {\bibinfo
+  {volume} {2019}}\bibfield  {number} {\bibinfo  {number} { (12)},\ \bibinfo
+  {eid} {035}},\ }\Eprint {https://arxiv.org/abs/1905.10198} {arXiv:1905.10198
+  [astro-ph.CO]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Li}\ and\ \citenamefont
+  {Shafieloo}(2019)}]{Li:2019yem}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {X.}~\bibnamefont
+  {Li}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Shafieloo}},\
+  }\bibfield  {title} {\bibinfo {title} {{A Simple Phenomenological Emergent
+  Dark Energy Model can Resolve the Hubble Tension}},\ }\href
+  {https://doi.org/10.3847/2041-8213/ab3e09} {\bibfield  {journal} {\bibinfo
+  {journal} {Astrophys. J. Lett.}\ }\textbf {\bibinfo {volume} {883}},\
+  \bibinfo {pages} {L3} (\bibinfo {year} {2019})},\ \Eprint
+  {https://arxiv.org/abs/1906.08275} {arXiv:1906.08275 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Benevento}}\ \emph {et~al.}(2020)\citenamefont
+  {{Benevento}}, \citenamefont {{Hu}},\ and\ \citenamefont
+  {{Raveri}}}]{2020PhRvD.101j3517B}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {{Benevento}}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {{Hu}}},\
+  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {{Raveri}}},\
+  }\bibfield  {title} {\bibinfo {title} {{Can late dark energy transitions
+  raise the Hubble constant?}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.101.103517} {\bibfield  {journal} {\bibinfo
+   {journal} {Physical Review D}\ }\textbf {\bibinfo {volume} {101}},\ \bibinfo
+  {eid} {103517} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/2002.11707} {arXiv:2002.11707 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Di~Valentino}\ \emph {et~al.}(2021)\citenamefont
+  {Di~Valentino}, \citenamefont {Melchiorri}, \citenamefont {Mena},
+  \citenamefont {Pan},\ and\ \citenamefont {Yang}}]{DiValentino:2020kpf}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Di~Valentino}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Melchiorri}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Mena}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Pan}},\ and\ \bibinfo
+  {author} {\bibfnamefont {W.}~\bibnamefont {Yang}},\ }\bibfield  {title}
+  {\bibinfo {title} {{Interacting Dark Energy in a closed universe}},\ }\href
+  {https://doi.org/10.1093/mnrasl/slaa207} {\bibfield  {journal} {\bibinfo
+  {journal} {Mon. Not. Roy. Astron. Soc.}\ }\textbf {\bibinfo {volume} {502}},\
+  \bibinfo {pages} {L23} (\bibinfo {year} {2021})},\ \Eprint
+  {https://arxiv.org/abs/2011.00283} {arXiv:2011.00283 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Di~Valentino}\ \emph {et~al.}(2020)\citenamefont
+  {Di~Valentino}, \citenamefont {Linder},\ and\ \citenamefont
+  {Melchiorri}}]{DiValentino:2020kha}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Di~Valentino}}, \bibinfo {author} {\bibfnamefont {E.~V.}\ \bibnamefont
+  {Linder}},\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Melchiorri}},\ }\bibfield  {title} {\bibinfo {title} {{$H_0$ ex machina:
+  Vacuum metamorphosis and beyond $H_0$}},\ }\href
+  {https://doi.org/10.1016/j.dark.2020.100733} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Dark Univ.}\ }\textbf {\bibinfo {volume} {30}},\ \bibinfo
+  {pages} {100733} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/2006.16291} {arXiv:2006.16291 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Bernal}}\ \emph {et~al.}(2016)\citenamefont
+  {{Bernal}}, \citenamefont {{Verde}},\ and\ \citenamefont
+  {{Riess}}}]{2016JCAP...10..019B}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont
+  {{Bernal}}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {{Verde}}},\
+  and\ \bibinfo {author} {\bibfnamefont {A.~G.}\ \bibnamefont {{Riess}}},\
+  }\bibfield  {title} {\bibinfo {title} {{The trouble with H$_{0}$}},\ }\href
+  {https://doi.org/10.1088/1475-7516/2016/10/019} {\bibfield  {journal}
+  {\bibinfo  {journal} {JCAP}\ }\textbf {\bibinfo {volume} {2016}}\bibfield
+  {number} {\bibinfo  {number} { (10)},\ \bibinfo {eid} {019}},\ }\Eprint
+  {https://arxiv.org/abs/1607.05617} {arXiv:1607.05617 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Poulin}\ \emph {et~al.}(2019)\citenamefont {Poulin},
+  \citenamefont {Smith}, \citenamefont {Karwal},\ and\ \citenamefont
+  {Kamionkowski}}]{Poulin:2018cxd}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Poulin}}, \bibinfo {author} {\bibfnamefont {T.~L.}\ \bibnamefont {Smith}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Karwal}},\ and\ \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Kamionkowski}},\ }\bibfield
+  {title} {\bibinfo {title} {{Early Dark Energy Can Resolve The Hubble
+  Tension}},\ }\href {https://doi.org/10.1103/PhysRevLett.122.221301}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+  {\bibinfo {volume} {122}},\ \bibinfo {pages} {221301} (\bibinfo {year}
+  {2019})},\ \Eprint {https://arxiv.org/abs/1811.04083} {arXiv:1811.04083
+  [astro-ph.CO]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sakstein}\ and\ \citenamefont
+  {Trodden}(2020)}]{Sakstein:2019fmf}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Sakstein}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Trodden}},\ }\bibfield  {title} {\bibinfo {title} {{Early Dark Energy from
+  Massive Neutrinos as a Natural Resolution of the Hubble Tension}},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.124.161301} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {124}},\
+  \bibinfo {pages} {161301} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/1911.11760} {arXiv:1911.11760 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hill}\ \emph {et~al.}(2020)\citenamefont {Hill},
+  \citenamefont {McDonough}, \citenamefont {Toomey},\ and\ \citenamefont
+  {Alexander}}]{Hill:2020osr}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
+  {Hill}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {McDonough}},
+  \bibinfo {author} {\bibfnamefont {M.~W.}\ \bibnamefont {Toomey}},\ and\
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Alexander}},\ }\bibfield
+  {title} {\bibinfo {title} {{Early dark energy does not restore cosmological
+  concordance}},\ }\href {https://doi.org/10.1103/PhysRevD.102.043507}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo
+  {volume} {102}},\ \bibinfo {pages} {043507} (\bibinfo {year} {2020})},\
+  \Eprint {https://arxiv.org/abs/2003.07355} {arXiv:2003.07355 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kreisch}\ \emph {et~al.}(2020)\citenamefont
+  {Kreisch}, \citenamefont {Cyr-Racine},\ and\ \citenamefont
+  {Dor\'e}}]{Kreisch:2019yzn}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont
+  {Kreisch}}, \bibinfo {author} {\bibfnamefont {F.-Y.}\ \bibnamefont
+  {Cyr-Racine}},\ and\ \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Dor\'e}},\ }\bibfield  {title} {\bibinfo {title} {{Neutrino puzzle:
+  Anomalies, interactions, and cosmological tensions}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.101.123505} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {101}},\ \bibinfo
+  {pages} {123505} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/1902.00534} {arXiv:1902.00534 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Park}\ \emph {et~al.}(2019)\citenamefont {Park},
+  \citenamefont {Kreisch}, \citenamefont {Dunkley}, \citenamefont
+  {Hadzhiyska},\ and\ \citenamefont {Cyr-Racine}}]{Park:2019ibn}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Park}}, \bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont {Kreisch}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Dunkley}}, \bibinfo
+  {author} {\bibfnamefont {B.}~\bibnamefont {Hadzhiyska}},\ and\ \bibinfo
+  {author} {\bibfnamefont {F.-Y.}\ \bibnamefont {Cyr-Racine}},\ }\bibfield
+  {title} {\bibinfo {title} {{$\Lambda$CDM or self-interacting neutrinos: How
+  CMB data can tell the two models apart}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.100.063524} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {100}},\ \bibinfo
+  {pages} {063524} (\bibinfo {year} {2019})},\ \Eprint
+  {https://arxiv.org/abs/1904.02625} {arXiv:1904.02625 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hazra}\ \emph {et~al.}(2019)\citenamefont {Hazra},
+  \citenamefont {Shafieloo},\ and\ \citenamefont {Souradeep}}]{Hazra:2018opk}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont
+  {Hazra}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Shafieloo}},\
+  and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Souradeep}},\
+  }\bibfield  {title} {\bibinfo {title} {{Parameter discordance in Planck CMB
+  and low-redshift measurements: projection in the primordial power
+  spectrum}},\ }\href {https://doi.org/10.1088/1475-7516/2019/04/036}
+  {\bibfield  {journal} {\bibinfo  {journal} {JCAP}\ }\textbf {\bibinfo
+  {volume} {04}},\ \bibinfo {pages} {036}},\ \Eprint
+  {https://arxiv.org/abs/1810.08101} {arXiv:1810.08101 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Keeley}}\ \emph {et~al.}(2020)\citenamefont
+  {{Keeley}}, \citenamefont {{Shafieloo}}, \citenamefont {{Hazra}},\ and\
+  \citenamefont {{Souradeep}}}]{2020JCAP...09..055K}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~E.}\ \bibnamefont
+  {{Keeley}}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {{Shafieloo}}}, \bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont
+  {{Hazra}}},\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {{Souradeep}}},\ }\bibfield  {title} {\bibinfo {title} {{Inflation wars: a
+  new hope}},\ }\href {https://doi.org/10.1088/1475-7516/2020/09/055}
+  {\bibfield  {journal} {\bibinfo  {journal} {JCAP}\ }\textbf {\bibinfo
+  {volume} {2020}}\bibfield  {number} {\bibinfo  {number} { (9)},\ \bibinfo
+  {eid} {055}},\ }\Eprint {https://arxiv.org/abs/2006.12710} {arXiv:2006.12710
+  [astro-ph.CO]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hazra}\ \emph {et~al.}(2022)\citenamefont {Hazra},
+  \citenamefont {Antony},\ and\ \citenamefont {Shafieloo}}]{Hazra:2022rdl}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont
+  {Hazra}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Antony}},\ and\
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Shafieloo}},\ }\bibfield
+  {title} {\bibinfo {title} {{One spectrum to cure them all: Signature from
+  early Universe solves major anomalies and tensions in cosmology}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {arXiv e-prints}\ }
+  (\bibinfo {year} {2022})},\ \Eprint {https://arxiv.org/abs/2201.12000}
+  {arXiv:2201.12000 [astro-ph.CO]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Antony}\ \emph {et~al.}(2022)\citenamefont {Antony},
+  \citenamefont {Finelli}, \citenamefont {Hazra},\ and\ \citenamefont
+  {Shafieloo}}]{Antony:2022ert}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Antony}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Finelli}},
+  \bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont {Hazra}},\ and\
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Shafieloo}},\ }\bibfield
+  {title} {\bibinfo {title} {{Discordances in cosmology and the violation of
+  slow-roll inflationary dynamics}},\ }\href@noop {} {\bibfield  {journal}
+  {\bibinfo  {journal} {arXiv e-prints}\ } (\bibinfo {year} {2022})},\ \Eprint
+  {https://arxiv.org/abs/2202.14028} {arXiv:2202.14028 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sch\"oneberg}\ \emph {et~al.}(2021)\citenamefont
+  {Sch\"oneberg}, \citenamefont {Franco~Abell\'an}, \citenamefont
+  {P\'erez~S\'anchez}, \citenamefont {Witte}, \citenamefont {Poulin},\ and\
+  \citenamefont {Lesgourgues}}]{Schoneberg:2021qvd}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Sch\"oneberg}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Franco~Abell\'an}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {P\'erez~S\'anchez}}, \bibinfo {author} {\bibfnamefont {S.~J.}\ \bibnamefont
+  {Witte}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Poulin}},\ and\
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Lesgourgues}},\
+  }\bibfield  {title} {\bibinfo {title} {{The $H_0$ Olympics: A fair ranking of
+  proposed models}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {arXiv e-prints}\ } (\bibinfo {year} {2021})},\ \Eprint
+  {https://arxiv.org/abs/2107.10291} {arXiv:2107.10291 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Knox}\ and\ \citenamefont
+  {Millea}(2020)}]{Knox:2019rjx}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Knox}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Millea}},\
+  }\bibfield  {title} {\bibinfo {title} {{Hubble constant
+  hunter\textquoteright{}s guide}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.101.043533} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {101}},\ \bibinfo
+  {pages} {043533} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/1908.03663} {arXiv:1908.03663 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Keeley}\ \emph {et~al.}(2021)\citenamefont {Keeley},
+  \citenamefont {Shafieloo}, \citenamefont {Zhao}, \citenamefont {Vazquez},\
+  and\ \citenamefont {Koo}}]{Keeley:2020aym}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~E.}\ \bibnamefont
+  {Keeley}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Shafieloo}},
+  \bibinfo {author} {\bibfnamefont {G.-B.}\ \bibnamefont {Zhao}}, \bibinfo
+  {author} {\bibfnamefont {J.~A.}\ \bibnamefont {Vazquez}},\ and\ \bibinfo
+  {author} {\bibfnamefont {H.}~\bibnamefont {Koo}},\ }\bibfield  {title}
+  {\bibinfo {title} {{Reconstructing the Universe: Testing the Mutual
+  Consistency of the Pantheon and SDSS/eBOSS BAO Data Sets with Gaussian
+  Processes}},\ }\href {https://doi.org/10.3847/1538-3881/abdd2a} {\bibfield
+  {journal} {\bibinfo  {journal} {Astron. J.}\ }\textbf {\bibinfo {volume}
+  {161}},\ \bibinfo {pages} {151} (\bibinfo {year} {2021})},\ \Eprint
+  {https://arxiv.org/abs/2010.03234} {arXiv:2010.03234 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Alam}\ \emph {et~al.}(2021)\citenamefont {Alam} \emph
+  {et~al.}}]{eBOSS:2020yzd}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Alam}} \emph {et~al.} (\bibinfo {collaboration} {eBOSS}),\ }\bibfield
+  {title} {\bibinfo {title} {{Completed SDSS-IV extended Baryon Oscillation
+  Spectroscopic Survey: Cosmological implications from two decades of
+  spectroscopic surveys at the Apache Point Observatory}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.103.083533} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {103}},\ \bibinfo
+  {pages} {083533} (\bibinfo {year} {2021})},\ \Eprint
+  {https://arxiv.org/abs/2007.08991} {arXiv:2007.08991 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Scolnic}\ \emph {et~al.}(2018)\citenamefont {Scolnic}
+  \emph {et~al.}}]{Pan-STARRS1:2017jku}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~M.}\ \bibnamefont
+  {Scolnic}} \emph {et~al.} (\bibinfo {collaboration} {Pan-STARRS1}),\
+  }\bibfield  {title} {\bibinfo {title} {{The Complete Light-curve Sample of
+  Spectroscopically Confirmed SNe Ia from Pan-STARRS1 and Cosmological
+  Constraints from the Combined Pantheon Sample}},\ }\href
+  {https://doi.org/10.3847/1538-4357/aab9bb} {\bibfield  {journal} {\bibinfo
+  {journal} {Astrophys. J.}\ }\textbf {\bibinfo {volume} {859}},\ \bibinfo
+  {pages} {101} (\bibinfo {year} {2018})},\ \Eprint
+  {https://arxiv.org/abs/1710.00845} {arXiv:1710.00845 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shafieloo}(2012{\natexlab{a}})}]{Shafieloo:2012jb}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Shafieloo}},\ }\bibfield  {title} {\bibinfo {title} {{Crossing Statistic:
+  Bayesian interpretation, model selection and resolving dark energy
+  parametrization problem}},\ }\href
+  {https://doi.org/10.1088/1475-7516/2012/05/024} {\bibfield  {journal}
+  {\bibinfo  {journal} {JCAP}\ }\textbf {\bibinfo {volume} {05}}\bibfield
+  {number} {\bibinfo  {number} { (5)},\ \bibinfo {pages} {024}},\ }\Eprint
+  {https://arxiv.org/abs/1202.4808} {arXiv:1202.4808 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shafieloo}(2012{\natexlab{b}})}]{Shafieloo:2012yh}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Shafieloo}},\ }\bibfield  {title} {\bibinfo {title} {{Crossing Statistic:
+  Reconstructing the Expansion History of the Universe}},\ }\href
+  {https://doi.org/10.1088/1475-7516/2012/08/002} {\bibfield  {journal}
+  {\bibinfo  {journal} {JCAP}\ }\textbf {\bibinfo {volume} {08}}\bibfield
+  {number} {\bibinfo  {number} { (8)},\ \bibinfo {pages} {002}},\ }\Eprint
+  {https://arxiv.org/abs/1204.1109} {arXiv:1204.1109 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shafieloo}\ and\ \citenamefont
+  {Hazra}(2017)}]{Shafieloo:2016zga}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Shafieloo}}\ and\ \bibinfo {author} {\bibfnamefont {D.~K.}\ \bibnamefont
+  {Hazra}},\ }\bibfield  {title} {\bibinfo {title} {{Consistency of the Planck
+  CMB data and $\Lambda$CDM cosmology}},\ }\href
+  {https://doi.org/10.1088/1475-7516/2017/04/012} {\bibfield  {journal}
+  {\bibinfo  {journal} {JCAP}\ }\textbf {\bibinfo {volume} {04}}\bibfield
+  {number} {\bibinfo  {number} { (4)},\ \bibinfo {pages} {012}},\ }\Eprint
+  {https://arxiv.org/abs/1610.07402} {arXiv:1610.07402 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chevallier}\ and\ \citenamefont
+  {Polarski}(2001)}]{Chevallier:2000qy}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Chevallier}}\ and\ \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Polarski}},\ }\bibfield  {title} {\bibinfo {title} {{Accelerating universes
+  with scaling dark matter}},\ }\href
+  {https://doi.org/10.1142/S0218271801000822} {\bibfield  {journal} {\bibinfo
+  {journal} {Int. J. Mod. Phys. D}\ }\textbf {\bibinfo {volume} {10}},\
+  \bibinfo {pages} {213} (\bibinfo {year} {2001})},\ \Eprint
+  {https://arxiv.org/abs/gr-qc/0009008} {arXiv:gr-qc/0009008} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Linder}(2003)}]{Linder:2002et}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~V.}\ \bibnamefont
+  {Linder}},\ }\bibfield  {title} {\bibinfo {title} {{Exploring the expansion
+  history of the universe}},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.90.091301} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {90}},\
+  \bibinfo {pages} {091301} (\bibinfo {year} {2003})},\ \Eprint
+  {https://arxiv.org/abs/astro-ph/0208512} {arXiv:astro-ph/0208512}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Brout}\ \emph {et~al.}(2022)\citenamefont {Brout}
+  \emph {et~al.}}]{Brout:2022vxf}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Brout}} \emph {et~al.},\ }\bibfield  {title} {\bibinfo {title} {{The
+  Pantheon+ Analysis: Cosmological Constraints}},\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {arXiv e-prints}\ } (\bibinfo {year}
+  {2022})},\ \Eprint {https://arxiv.org/abs/2202.04077} {arXiv:2202.04077
+  [astro-ph.CO]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Jedamzik}}\ \emph {et~al.}(2021)\citenamefont
+  {{Jedamzik}}, \citenamefont {{Pogosian}},\ and\ \citenamefont
+  {{Zhao}}}]{2021CmPhy...4..123J}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {{Jedamzik}}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {{Pogosian}}},\ and\ \bibinfo {author} {\bibfnamefont {G.-B.}\ \bibnamefont
+  {{Zhao}}},\ }\bibfield  {title} {\bibinfo {title} {{Why reducing the cosmic
+  sound horizon alone can not fully resolve the Hubble tension}},\ }\href
+  {https://doi.org/10.1038/s42005-021-00628-x} {\bibfield  {journal} {\bibinfo
+  {journal} {Communications Physics}\ }\textbf {\bibinfo {volume} {4}},\
+  \bibinfo {eid} {123} (\bibinfo {year} {2021})},\ \Eprint
+  {https://arxiv.org/abs/2010.04158} {arXiv:2010.04158 [astro-ph.CO]}
+  \BibitemShut {NoStop}%
+\end{thebibliography}%
