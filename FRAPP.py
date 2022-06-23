@@ -101,7 +101,7 @@ def setup_file(filename, savefile=None):
     newtext.write(i)
   newtext.write(r"\\sffamily")
   newtext.write(r"\\setstretch{1.6}")
-  nextext.write(fulltext[abs_ind+1])
+  newtext.write(fulltext[abs_ind+1])
   newtext.write(r"\\sffamily")
 
   # From here, each line can be read in an FRAPPified accordingly. 
