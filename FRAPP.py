@@ -40,7 +40,8 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
         ## word_split is a list of these words split by the hyphen/slash
 
         for j, w in enumerate(word_split): # word split by characters like - or /
-          if w[0].isalpha(): word_split[j] = modify_word_font(w) # FRAPPifying the word! 
+          try: if w[0].isalpha(): word_split[j] = modify_word_font(w) # FRAPPifying the word! 
+          except: pass;
           ## if word_split is a single word, modify_word_font still works
 
         ## Recombining all split parts
@@ -101,6 +102,7 @@ def setup_file(filename, savefile=None):
     newtext.write(i)
   newtext.write(r"\\sffamily")
   newtext.write(r"\\setstretch{1.6}")
+  # Adding the abstract setup code (e.g. \begin{abstract} or \abstract)
   newtext.write(fulltext[abs_ind+1])
   newtext.write(r"\\sffamily")
 
