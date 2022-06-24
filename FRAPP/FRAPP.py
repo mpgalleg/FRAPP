@@ -6,6 +6,8 @@
 import numpy as np
 import re
 import subprocess
+import loadarxiv
+import sys
 
 # open .tex file you want to FRAPP
 # Start with the assumption that the user has all source files saved locally
@@ -200,3 +202,34 @@ def test(a):
       f.write(i)
 
   f.close()
+
+
+def main():
+  global main_tex, datadir
+  input_arx_code = ''
+  outputfile = None
+
+  #processing user input
+  nargs  = len(sys.argv)
+  if nargs<2:
+    print('Please provide input')
+  input_arx_code = sys.argv[1]
+  if nargs > 2:
+    for i in range(2, nargs):
+      if sys.argv[i] == '-o' and i+1 <nargs:
+        outfile = sys.argv[i+1]
+  print('ArXiv paper is {0}'.format(input_arx_code))
+  print('Output file is {0}'.format(outputfile))
+
+  # download ArXiv Source code and find the .tex file
+  arx_source_url, arx_code = loadarxiv.stage_input_url(input_arx_code)
+  main_tex, datadir = loadarxiv.download_arxiv_source(arx_source_url, arx_code)
+  print('main tex file is {0} and the datadir is {1}'.format(main_tex, datadir))
+  #Run FRAPPify
+  frapp_tex = FRAPPify(main_tex, savefile=outputfile)
+  # Run PDF:
+
+
+if __name__ == "__main__":
+  main()
+
