@@ -9,19 +9,36 @@ import sys, getopt
 import subprocess
 
 def stage_input_url(arxiv_id):
-    reg_pattern = '[0-9]{4}.[0-9]{5}'
-    #identify arxiv id
-    arx_pat = re.compile(reg_pattern)
-    if arx_pat.search(arxiv_id):
+  """This function will identify the unique ArXiv Code from the user input
+    Args: 
+      arxiv_id (str): A string provided by user input. It can be a link or a arxiv bibcode. This should contain ArXiv id (e.g., 2006:12485)
+    Returns: 
+      arx_source_url (str): Arxiv Source code url. The link corresponds to .tar.gz file available on the ArXiv
+      arx_code (str): The unique ArXiv Identifier code for given paper
+  """
+
+
+  reg_pattern = '[0-9]{4}.[0-9]{5}'
+  #identify arxiv id
+  arx_pat = re.compile(reg_pattern)
+  if arx_pat.search(arxiv_id):
         arx_code = arx_pat.search(arxiv_id).group()
-    else:
+  else:
         Exception('Provide a valid arxiv id or url.')
-    arx_code = arx_code.rstrip()
-    arx_source_url_pre  = 'https://arxiv.org/e-print/'
-    arx_source_url = arx_source_url_pre + arx_code
-    return arx_source_url, arx_code
+  arx_code = arx_code.rstrip()
+  arx_source_url_pre  = 'https://arxiv.org/e-print/'
+  arx_source_url = arx_source_url_pre + arx_code
+  return arx_source_url, arx_code
 
 def download_arxiv_source(arx_source_url, arx_code):
+  """This function will download arxiv source code, extract it, and identify the tex to be Frappified. 
+    Args: 
+      arx_source_url (str): Arxiv Source code url. The link corresponds to .tar.gz file available on the ArXiv
+      arx_code (str): The unique ArXiv Identifier code for given paper
+   Returns: 
+      main_tex (str): Latex file to be processed
+      datadir (str): The working directory
+  """
   arx_tar = arx_code+'.tar.gz' # check if extension is os dependant
   response = request.urlretrieve(arx_source_url, arx_tar)
   
@@ -29,8 +46,12 @@ def download_arxiv_source(arx_source_url, arx_code):
     tar_ref.extractall('./'+arx_code)
   
   datadir = './'+arx_code
+  datadir = os.getcwd()
+  if os.path.basename(datadir) != arx_code:
+    datadir = os.getcwd()+'/'+arx_code
   os.chdir(datadir)
-  print(os.getcwd())
+  print(datadir)
+
   #identify tex file
   main_tex = ''
   paper_tex_file = glob.glob('*.tex')
@@ -51,10 +72,13 @@ def download_arxiv_source(arx_source_url, arx_code):
       main_tex = bbl_pre+'.tex'
   
   #clean up tar file
-  subprocess.run(["rm", arx_tar]) # not working
+  #subprocess.run(["rm", arx_tar]) # not working
 
   return main_tex, datadir  
 
+
+
+'''
 
 def main():
   input_arx_code = ''
@@ -77,7 +101,7 @@ def main():
 
 if __name__ == "__main__":
   main()
-
+'''
 
 
 
