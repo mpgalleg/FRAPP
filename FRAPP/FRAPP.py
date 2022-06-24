@@ -8,6 +8,7 @@ import re
 import subprocess
 import FRAPP.loadarxiv as loadarxiv
 import sys
+import PDF
 
 # open .tex file you want to FRAPP
 # Start with the assumption that the user has all source files saved locally
@@ -23,7 +24,7 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
       None  """ 
 
   ### First, sets up the new save file ###
-  fulltext, newtext, abs_ind = setup_file(filename, savefile)
+  fulltext, newtext, abs_ind, frapped_file_name = setup_file(filename, savefile)
 
   ### From here on, check if line is text. If it is, start FRAPP procedure
   for line in fulltext[abs_ind+1:]: 
@@ -55,7 +56,7 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
       newtext.write(newline)
     ## Repeat for the rest of the paper
   newtext.close()
-  return None
+  return frapped_file_name
 ### END of FRAPPify ###
 
 def setup_file(filename, savefile=None): 
@@ -82,7 +83,9 @@ def setup_file(filename, savefile=None):
     fulltext = text.readlines() # list of lines from file
 
   # Opening the new savefile that will be built upon
-  newtext = open(savefile+".tex", "w")
+
+  frapped_file_name = savefile+".tex"
+  newtext = open(frapped_file_name, "w")
 
   ### FIND THE START OF THE PAPER ###
   ### may want to define this part at def setup_paper()
@@ -100,17 +103,17 @@ def setup_file(filename, savefile=None):
   # Adding code before abstract + \usepackage{setspace} to the new paper
   for i in fulltext[0:docclass_ind+1]:
     newtext.write(i)
-  newtext.write(r"\\usepackage{setspace}")
+  newtext.write(r"\usepackage{setspace}")
   for i in fulltext[docclass_ind+1:abs_ind]: 
     newtext.write(i)
-  newtext.write(r"\\sffamily")
-  newtext.write(r"\\setstretch{1.6}")
+  newtext.write(r"\sffamily")
+  newtext.write(r"\setstretch{1.6}")
   # Adding the abstract setup code (e.g. \begin{abstract} or \abstract)
   newtext.write(fulltext[abs_ind+1])
-  newtext.write(r"\\sffamily")
+  newtext.write(r"\sffamily")
 
   # From here, each line can be read in an FRAPPified accordingly. 
-  return fulltext,newtext,abs_ind
+  return fulltext,newtext,abs_ind, frapped_file_name
 
 def open_file(filename):
 
@@ -225,9 +228,12 @@ def main():
   arx_source_url, arx_code = loadarxiv.stage_input_url(input_arx_code)
   main_tex, datadir = loadarxiv.download_arxiv_source(arx_source_url, arx_code)
   print('main tex file is {0} and the datadir is {1}'.format(main_tex, datadir))
+  
   #Run FRAPPify
-  frapp_tex = FRAPPify(main_tex, savefile=outputfile)
+  frapped_file_name = FRAPPify(main_tex, savefile=outputfile)  
+  
   # Run PDF:
+  PDF.make_pdf(frapped_file_name,path_to_tex_folder=datadir)
 
 
 if __name__ == "__main__":
