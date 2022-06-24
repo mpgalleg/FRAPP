@@ -6,7 +6,7 @@
 import numpy as np
 import re
 import subprocess
-import loadarxiv
+import FRAPP.loadarxiv as loadarxiv
 import sys
 
 # open .tex file you want to FRAPP
