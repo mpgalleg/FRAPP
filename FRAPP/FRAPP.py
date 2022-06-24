@@ -24,11 +24,17 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
       None  """ 
 
   ### First, sets up the new save file ###
-  fulltext, newtext, abs_ind, frapped_file_name = setup_file(filename, savefile)
+  fulltext, newtext, abs_ind = setup_file(filename, savefile)
 
+  ### CHANGE THE FULL TEXT TO PUT COMMENTS AND CITATIONS ON NEW LINES HERE ###
+  #fulltext_new = format_text(fulltext)
+  fulltext_new = fulltext.copy()
+  
   ### From here on, check if line is text. If it is, start FRAPP procedure
-  for line in fulltext[abs_ind+1:]: 
-    if line[0] == "\\" and line[-1] == "}": # Assume formatting code follows known pattern
+  for line in fulltext_new[abs_ind+1:]: 
+
+    # Skip all lines that begin with known formatting characters
+    if line[0] == "\\" or line[0] == "%" or line[0] == "$": # Assume formatting code follows known pattern
       newtext.write(line)
       pass;
     else: # else, this is text!
@@ -38,15 +44,14 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
       ## allows the code to bold acronymns and camel-case words properly.
 
       for i, word in enumerate(words): # checks each word for compound structure
-        word_split = re.split('(\W)', word)
+        word_split = re.split("(/|-)", word)
         ## Each 'word' may be a hyphenated/slash compound word
         ## word_split is a list of these words split by the hyphen/slash
 
         for j, w in enumerate(word_split): # word split by characters like - or /
           try: 
             if w[0].isalpha(): word_split[j] = modify_word_font(w) # FRAPPifying the word! 
-          except: pass;
-          ## if word_split is a single word, modify_word_font still works
+          except: pass; # if word_split is a single word, modify_word_font still works
 
         ## Recombining all split parts
         words[i] = "".join(word_split) # recombining split word into single word
@@ -54,10 +59,12 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
     
       ## After line is reformatted into newline, write in text
       newtext.write(newline)
+      newtext.write("\n")
     ## Repeat for the rest of the paper
   newtext.close()
-  return frapped_file_name
+  return None
 ### END of FRAPPify ###
+
 
 def setup_file(filename, savefile=None): 
 
