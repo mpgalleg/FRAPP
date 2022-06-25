@@ -12,5 +12,10 @@ def get_property(prop, project):
 setup(
     name='FRAPP',
     version=get_property('__version__', 'FRAPP'),
-    packages=find_packages()
+    packages=find_packages(),
+    description='FRAPP (Font-Facilitated Reading for Arxiv PDF Publications)',
+    url='https://github.com/mpgalleg/FRAPP',
+    author='MGG, QH, PP',
+    keywords='ArXiv Reading Accessibility',
+    install_requires=get_requires()
 )
