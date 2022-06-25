@@ -15,13 +15,20 @@ import PDF
 # Eventually, add functionality of downloading source code from a given link
 
 def FRAPPify(filename="main.tex", savefile=None, compile=True):
-  """The main user function for FRAPPifying an ArXiv paper. This function will save a modified 
+  """FRAPPify
+  
+  The main user function for FRAPPifying an ArXiv paper. This function will save a modified .tex file
+
     Args: 
       filename (str): The name of the .tex file to be modified.
+
       savefile (str): The desired name of the modified .tex and .pdf output file. If none is given, the original filename with a _frapp modification will be used.
+      
       compile (bool): Sets whether or not to compile the new .tex file into a PDF. 
-    Returns: 
-      None  """ 
+
+    Returns:
+      None  
+  """ 
 
   ### First, sets up the new save file ###
   fulltext, newtext, abs_ind, frapped_file_name = setup_file(filename, savefile)
@@ -72,17 +79,22 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
 
 
 def setup_file(filename, savefile=None): 
+  """ setup_file
+  
+  Sets up the new savefile by copying over the Latex packages and settings up to the abstract.
+      
+    Args: 
+      filename (str): 
 
-  """Sets up the new savefile by copying over the Latex packages and settings up to the abstract.
+      savefile (str): 
       
-      Args: 
-        filename (str): 
-        savefile (str): 
-      
-      Returns: 
-        fulltext (list): A list containing all lines of the original .tex file.
-        newtext (file): An open text file for saving the remaining lines in.
-        abs_ind (int): The starting index of the abstract, from which the rest of the paper can be read."""
+    Returns: 
+      fulltext (list): A list containing all lines of the original .tex file.
+
+      newtext (file): An open text file for saving the remaining lines in.
+
+      abs_ind (int): The starting index of the abstract, from which the rest of the paper can be read.
+  """
 
   # If no savefile name given, use filename w/ modification
   name = filename.split(".")[0] # remove filetype from filename
