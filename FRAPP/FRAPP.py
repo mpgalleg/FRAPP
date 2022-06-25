@@ -6,7 +6,7 @@
 import numpy as np
 import re
 import subprocess
-import FRAPP.loadarxiv as loadarxiv
+import loadarxiv 
 import sys
 import PDF
 
@@ -24,45 +24,50 @@ def FRAPPify(filename="main.tex", savefile=None, compile=True):
       None  """ 
 
   ### First, sets up the new save file ###
-  fulltext, newtext, abs_ind = setup_file(filename, savefile)
-
+  fulltext, newtext, abs_ind, frapped_file_name = setup_file(filename, savefile)
   ### CHANGE THE FULL TEXT TO PUT COMMENTS AND CITATIONS ON NEW LINES HERE ###
   #fulltext_new = format_text(fulltext)
   fulltext_new = fulltext.copy()
   
   ### From here on, check if line is text. If it is, start FRAPP procedure
-  for line in fulltext_new[abs_ind+1:]: 
+  ### to make it work--editing only first 10 lines
 
-    # Skip all lines that begin with known formatting characters
-    if line[0] == "\\" or line[0] == "%" or line[0] == "$": # Assume formatting code follows known pattern
+  # Font used in Kindle reading mode: Bookerly, Ember and Ember Bold
+  for ii, line in enumerate(fulltext_new[abs_ind+1:]): 
+
+    if ii <10:
+      # Skip all lines that begin with known formatting characters
+      if line[0] == "\\" or line[0] == "%" or line[0] == "$": # Assume formatting code follows known pattern
+        newtext.write(line)
+        pass;
+      else: # else, this is text!
+        words = re.sub(r"([A-Z])", r" \1", line).split() # splits the line into words
+        ## 'words' is the line split by spaces and capital letters.
+        ## Treating each captial letter as the start of a new word
+        ## allows the code to bold acronymns and camel-case words properly.
+
+        for i, word in enumerate(words): # checks each word for compound structure
+          word_split = re.split("(/|-)", word)
+          ## Each 'word' may be a hyphenated/slash compound word
+          ## word_split is a list of these words split by the hyphen/slash
+
+          for j, w in enumerate(word_split): # word split by characters like - or /
+            try: 
+              if w[0].isalpha(): word_split[j] = modify_word_font(w) # FRAPPifying the word! 
+            except: pass; # if word_split is a single word, modify_word_font still works
+
+          ## Recombining all split parts
+          words[i] = "".join(word_split) # recombining split word into single word
+        newline = " ".join(words) # recombining all reformatted words into new line
+      
+        ## After line is reformatted into newline, write in text
+        newtext.write(newline)
+        newtext.write("\n")
+      ## Repeat for the rest of the paper
+    else:
       newtext.write(line)
-      pass;
-    else: # else, this is text!
-      words = re.sub(r"([A-Z])", r" \1", line).split() # splits the line into words
-      ## 'words' is the line split by spaces and capital letters.
-      ## Treating each captial letter as the start of a new word
-      ## allows the code to bold acronymns and camel-case words properly.
-
-      for i, word in enumerate(words): # checks each word for compound structure
-        word_split = re.split("(/|-)", word)
-        ## Each 'word' may be a hyphenated/slash compound word
-        ## word_split is a list of these words split by the hyphen/slash
-
-        for j, w in enumerate(word_split): # word split by characters like - or /
-          try: 
-            if w[0].isalpha(): word_split[j] = modify_word_font(w) # FRAPPifying the word! 
-          except: pass; # if word_split is a single word, modify_word_font still works
-
-        ## Recombining all split parts
-        words[i] = "".join(word_split) # recombining split word into single word
-      newline = " ".join(words) # recombining all reformatted words into new line
-    
-      ## After line is reformatted into newline, write in text
-      newtext.write(newline)
-      newtext.write("\n")
-    ## Repeat for the rest of the paper
   newtext.close()
-  return None
+  return frapped_file_name
 ### END of FRAPPify ###
 
 
@@ -110,14 +115,15 @@ def setup_file(filename, savefile=None):
   # Adding code before abstract + \usepackage{setspace} to the new paper
   for i in fulltext[0:docclass_ind+1]:
     newtext.write(i)
-  newtext.write(r"\usepackage{setspace}")
+  newtext.write(r"\usepackage{setspace}"+'\n')
   for i in fulltext[docclass_ind+1:abs_ind]: 
     newtext.write(i)
   newtext.write(r"\sffamily")
-  newtext.write(r"\setstretch{1.6}")
+  newtext.write(r"\setstretch{1.6}"+'\n')
   # Adding the abstract setup code (e.g. \begin{abstract} or \abstract)
-  newtext.write(fulltext[abs_ind+1])
-  newtext.write(r"\sffamily")
+  # changing this to abs_ind as this is the line that corresponds to \begin{abstract} command
+  newtext.write(fulltext[abs_ind])
+  newtext.write(r"\sffamily"+'\n')
 
   # From here, each line can be read in an FRAPPified accordingly. 
   return fulltext,newtext,abs_ind, frapped_file_name
@@ -240,6 +246,7 @@ def main():
   frapped_file_name = FRAPPify(main_tex, savefile=outputfile)  
   
   # Run PDF:
+  #print(frapped_file_name, datadir)
   PDF.make_pdf(frapped_file_name,path_to_tex_folder=datadir)
 
 
