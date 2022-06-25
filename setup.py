@@ -9,6 +9,13 @@ def get_property(prop, project):
                        open(project + '/__init__.py').read())
     return result.group(1)
 
+# auto-updating version code stolen from orbitize
+def get_requires():
+    reqs = []
+    for line in open('requirements.txt', 'r').readlines():
+        reqs.append(line)
+    return reqs
+
 setup(
     name='FRAPP',
     version=get_property('__version__', 'FRAPP'),
