@@ -23,6 +23,6 @@ setup(
     description='FRAPP (Font-Facilitated Reading for Arxiv PDF Publications)',
     url='https://github.com/mpgalleg/FRAPP',
     author='MGG, QH, PP',
-    keywords='ArXiv Reading Accessibility',
-    install_requires=get_requires()
+    keywords='ArXiv Reading Accessibility'
+    #install_requires=get_requires()
 )
