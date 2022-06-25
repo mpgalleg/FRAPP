@@ -164,25 +164,31 @@ def open_file(filename):
   abstract = fulltext[start_ind+1]
 
 def bold_letter(word, split_index):
-  """Inserts LaTex code for applying bold-face to the appropriate letters. 
+  """  
+    Inserts LaTex code for applying bold-face to the appropriate letters. 
+    
       Args: 
-        word (str): """
+        word (str):
+
+      Returns:
+        new word (str):
+   """
   return '\\textbf{'+ word[0:split_index] + '}' + word[split_index:]
 
 
 def modify_word_font(word):
-  """ Modify word font 
+  """  
 
   This takes in one word from latex file, checks word length, and bolds appropriate letters. 
   
-  Args:
-    word (str): Word to be modified
+    Args:
+      word (str): Word to be modified
 
-  Returns:
-    new_word (str): latex compatible modified word 
+    Returns:
+      new_word (str): latex compatible modified word 
 
-  Example:
-    'espresso' -> '\\textbf{espr}esso' 
+    Example:
+      'espresso' -> '\\textbf{espr}esso' 
   """
 
   length = len(word) 
