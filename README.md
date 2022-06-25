@@ -4,9 +4,9 @@ Font-Facilitated Reading for Arxiv PDF Publications
 
 
 ### How to install:
-
+'''
 git clone https://github.com/mpgalleg/FRAPP.git
-
+'''
 ### Example Usage:
 
 To FRAPPify any ArXiv paper
