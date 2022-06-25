@@ -1,6 +1,6 @@
 import os
 
-__version__ = '1.0.0'
+__version__ = '1.1.1'
 
 # set Python env variable to keep track of example data dir
 frapp_dir = os.path.dirname(__file__)
