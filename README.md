@@ -6,12 +6,15 @@ Font-Facilitated Reading for Arxiv PDF Publications
 ### How to install:
 
     git clone https://github.com/mpgalleg/FRAPP.git
-
+    
+    cd FRAPP
+    
+    pip install -r requirements.txt -e .
+    
 ### Example Usage:
 
 To FRAPPify any ArXiv paper
 
-    cd FRAPP
     python FRAPP/FRAPP.py arXiv:2206.11701
 
 or 
