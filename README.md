@@ -20,6 +20,13 @@ or
 
 Note: Currently only AAS Journal formats are accepted. Accepted inputs can be any string/url that includes the ArXiv identifier numeric id. 
 
+### Requirements:
+
+    numpy
+    subprocess
+    pdflatex
+Any LaTEX compiler, e.g., for Mac, you can use MacTEX
+
 [![codeastro](https://img.shields.io/badge/Made%20at-Code/Astro-blueviolet.svg)](https://semaphorep.github.io/codeastro/)
 
 

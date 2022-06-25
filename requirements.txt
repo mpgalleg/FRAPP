@@ -1,2 +1,4 @@
 numpy
-re
+subprocess
+pdflatex
+# Latex Compiler: For MAC, use mactex
